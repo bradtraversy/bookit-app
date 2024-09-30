@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookit | Book a Meeting Room</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="bg-gray-100">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <a href="/">
+              <img class="h-12 w-12" src="images/logo.svg" alt="Bookit" />
+            </a>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a
+                  href="/"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Rooms
+                </a>
+                <!-- Logged In Only -->
+                <a
+                  href="/bookings.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Bookings
+                </a>
+                <a
+                  href="/add-room.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Add Room
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Right Side Menu -->
+          <div class="ml-auto">
+            <nav class="ml-4 flex items-center md:ml-6">
+              <!-- Logged Out Only -->
+              <a
+                href="login.html"
+                class="mr-3 text-gray-800 hover:text-gray-600"
+              >
+                <i class="fa fa-sign-in"></i> Login
+              </a>
+              <a
+                href="register.html"
+                class="mr-3 text-gray-800 hover:text-gray-600"
+              >
+                <i class="fa fa-user"></i> Register
+              </a>
+            </nav>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+          <a
+            href="/"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+          >
+            Rooms
+          </a>
+          <!-- Logged In Only -->
+          <a
+            href="/bookings.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+          >
+            Bookings
+          </a>
+          <a
+            href="/add-room.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+          >
+            Add Room
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center">
+        <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm mt-20">
+          <form>
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
+              Register
+            </h2>
+
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-bold mb-2"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="border rounded w-full py-2 px-3"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-bold mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="border rounded w-full py-2 px-3"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="password" class="block text-gray-700 font-bold mb-2"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="border rounded w-full py-2 px-3"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="confirm-password"
+                class="block text-gray-700 font-bold mb-2"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                class="border rounded w-full py-2 px-3"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col gap-5">
+              <button
+                type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Register
+              </button>
+
+              <p>
+                Have an account?
+                <a href="login.html" class="text-blue-500">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

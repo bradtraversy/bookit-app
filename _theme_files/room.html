@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookit | Book a Meeting Room</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="bg-gray-100">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <a href="/">
+              <img class="h-12 w-12" src="images/logo.svg" alt="Bookit" />
+            </a>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a
+                  href="/"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Rooms
+                </a>
+                <!-- Logged In Only -->
+                <a
+                  href="/bookings.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Bookings
+                </a>
+                <a
+                  href="/add-room.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Add Room
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Right Side Menu -->
+          <div class="ml-auto">
+            <nav class="ml-4 flex items-center md:ml-6">
+              <a href="my-rooms.html">
+                <i class="fa fa-building"></i> My Rooms
+              </a>
+              <a
+                href="login.html"
+                class="mx-3 text-gray-800 hover:text-gray-600"
+              >
+                <i class="fa fa-sign-out"></i> Sign Out
+              </a>
+            </nav>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+          <a
+            href="/"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+          >
+            Rooms
+          </a>
+          <!-- Logged In Only -->
+          <a
+            href="/bookings.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+          >
+            Bookings
+          </a>
+          <a
+            href="/add-room.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+          >
+            Add Room
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <section class="bg-white mb-5 shadow px-4 py-4">
+        <h1 class="text-2xl font-bold tracking-tight text-gray-900">
+          Grand Conference Hall
+        </h1>
+      </section>
+      <div class="bg-white shadow rounded-lg p-6">
+        <a
+          href="/rooms.html"
+          class="flex items-center text-gray-600 hover:text-gray-800 mb-4"
+        >
+          <i class="fa fa-chevron-left"></i>
+          <span class="ml-2">Back to Rooms</span>
+        </a>
+
+        <div class="flex flex-col sm:flex-row sm:space-x-6">
+          <img
+            src="images/rooms/room-1.jpg"
+            alt="Grand Conference Hall"
+            class="w-full sm:w-1/3 h-64 object-cover rounded-lg"
+          />
+
+          <div class="mt-4 sm:mt-0 sm:flex-1">
+            <p class="text-gray-600 mb-4">
+              Spacious conference hall perfect for large meetings and events.
+              Equipped with modern amenities and comfortable seating.
+            </p>
+
+            <ul class="space-y-2">
+              <li>
+                <span class="font-semibold text-gray-800">Size:</span> 3000 sq
+                ft
+              </li>
+              <li>
+                <span class="font-semibold text-gray-800">Availability:</span>
+                9 AM - 5 PM
+              </li>
+              <li>
+                <span class="font-semibold text-gray-800">Price:</span>
+                $150/hour
+              </li>
+              <li>
+                <span class="font-semibold text-gray-800">Address:</span> 555
+                California St, San Francisco, CA 94104
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h2 class="text-xl font-bold">Book this Room</h2>
+          <form class="mt-4">
+            <input type="hidden" name="room_id" value="{room.$id}" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  htmlFor="check_in_date"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Check-In Date
+                </label>
+                <input
+                  type="date"
+                  id="check_in_date"
+                  name="check_in_date"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="check_in_time"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Check-In Time
+                </label>
+                <input
+                  type="time"
+                  id="check_in_time"
+                  name="check_in_time"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="check_out_date"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Check-Out Date
+                </label>
+                <input
+                  type="date"
+                  id="check_out_date"
+                  name="check_out_date"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="check_out_time"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Check-Out Time
+                </label>
+                <input
+                  type="time"
+                  id="check_out_time"
+                  name="check_out_time"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <button
+                type="submit"
+                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+              >
+                Book Room
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
