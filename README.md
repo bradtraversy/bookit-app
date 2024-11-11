@@ -7,7 +7,7 @@ The "_theme_files" folder contains the UI and HTML files only.
 
 ## Usage
 
-#### Install Dependencies
+#### Install Dependencies!
 
 ```bash
 npm install
